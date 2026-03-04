@@ -9,18 +9,6 @@
 :root{--ink:#0f1923;--ink-light:#4a5568;--ink-faint:#8a9ab0;--bg:#f8f7f4;--bgc:#fff;--accent:#1a6cf6;--as:#e8f0fe;--a2:#0ea47a;--a2s:#e6f7f2;--a3:#e85d34;--a3s:#fdf0eb;--a4:#7c3aed;--a4s:#f0eeff;--bd:#e2e6ed;--sh:0 8px 32px rgba(15,25,35,.13);--r:14px}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;min-height:100vh}
-#gate{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:9999}
-.gc{background:var(--bgc);border:1px solid var(--bd);border-radius:20px;padding:52px 48px;max-width:420px;width:90%;text-align:center;box-shadow:var(--sh)}
-.gl{width:52px;height:52px;background:var(--as);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:22px}
-.gc h1{font-family:'DM Serif Display',serif;font-size:1.7rem;color:var(--ink);margin-bottom:8px}
-.gc p{color:var(--ink-light);font-size:.92rem;margin-bottom:28px}
-.gi{width:100%;padding:13px 18px;border:1.5px solid var(--bd);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:1rem;color:var(--ink);background:var(--bg);outline:none;margin-bottom:14px;letter-spacing:.08em;display:block}
-.gi:focus{border-color:var(--accent)}
-.gb{width:100%;padding:13px;background:var(--accent);color:#fff;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:600;cursor:pointer}
-.gb:hover{background:#1459d4}
-.gh{margin-top:16px;font-size:.82rem;color:var(--ink-faint)}
-.em{color:#e53e3e;font-size:.85rem;margin-top:10px;display:none}
-#portfolio{display:none}
 nav{position:sticky;top:0;background:rgba(248,247,244,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--bd);z-index:100;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:62px}
 .nl{font-family:'DM Serif Display',serif;font-size:1.35rem;color:#0a1628;font-weight:700;display:flex;align-items:center;gap:12px;letter-spacing:.02em}
 .nl span{color:var(--accent);display:inline-flex}
@@ -147,24 +135,10 @@ section{max-width:900px;margin:0 auto;padding:0 5% 72px}
 .div2{max-width:900px;margin:0 auto;padding:0 5%}
 .div2 hr{border:none;border-top:1px solid var(--bd);margin-bottom:64px}
 footer{text-align:center;padding:28px 5%;color:var(--ink-faint);font-size:.8rem;border-top:1px solid var(--bd)}
-@media(max-width:700px){.na{display:none}.hero{flex-direction:column;gap:24px;padding:52px 5% 36px}.hb{flex-direction:row;flex-wrap:wrap}.hbx{min-width:120px}.pg{grid-template-columns:1fr}.cbox{padding:28px 20px}.gc{padding:36px 24px}.pc.full{grid-column:auto}}
+@media(max-width:700px){.na{display:none}.hero{flex-direction:column;gap:24px;padding:52px 5% 36px}.hb{flex-direction:row;flex-wrap:wrap}.hbx{min-width:120px}.pg{grid-template-columns:1fr}.cbox{padding:28px 20px}.pc.full{grid-column:auto}}
 </style>
 </head>
 <body>
-
-<div id="gate">
-  <div class="gc">
-    <div class="gl">&#128274;</div>
-    <h1>Portfolio Access</h1>
-    <p>This portfolio is shared by request.<br>Enter the password provided to you.</p>
-    <input type="password" id="pwInput" class="gi" placeholder="Enter password" autocomplete="off">
-    <button class="gb" id="unlockBtn">Unlock Portfolio</button>
-    <div class="em" id="errorMsg">Incorrect password. Please try again.</div>
-    <p class="gh">No password? <a href="mailto:ofattaban@gmail.com" style="color:var(--accent);text-decoration:none;">Request access</a></p>
-  </div>
-</div>
-
-<div id="portfolio">
 
 <nav>
   <div class="nl"><span style="width:32px;height:32px;background:#0a1628;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;vertical-align:middle"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:15px;height:15px"><polyline points="2,14 6,8 10,11 14,5 18,7" fill="none" stroke="#1a6cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="14,5 18,5 18,9" fill="none" stroke="#1a6cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>ORIENT ATTABAN</div>
@@ -394,24 +368,5 @@ footer{text-align:center;padding:28px 5%;color:var(--ink-faint);font-size:.8rem;
 
 <footer>&#169; 2026 ORIENT ATTABAN &middot; Dubai, UAE &middot; Portfolio shared by request.</footer>
 
-</div>
-
-<script>
-var PW="orient1234";
-function unlock(){
-  var v=document.getElementById("pwInput").value;
-  if(v===PW){
-    document.getElementById("gate").style.display="none";
-    document.getElementById("portfolio").style.display="block";
-    window.scrollTo(0,0);
-  } else {
-    document.getElementById("errorMsg").style.display="block";
-    document.getElementById("pwInput").value="";
-    document.getElementById("pwInput").focus();
-  }
-}
-document.getElementById("unlockBtn").onclick=unlock;
-document.getElementById("pwInput").onkeydown=function(e){if(e.key==="Enter")unlock();};
-</script>
 </body>
 </html>
