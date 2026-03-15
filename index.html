@@ -46,7 +46,6 @@ section{max-width:900px;margin:0 auto;padding:0 5% 72px}
 .pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
 .pc{background:var(--bgc);border:1px solid var(--bd);border-radius:var(--r);overflow:hidden;transition:box-shadow .25s,transform .25s}
 .pc:hover{box-shadow:var(--sh);transform:translateY(-3px)}
-/* Full-width card variant */
 .pc.full{grid-column:1/-1}
 .cp{height:155px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .cp.dash{background:linear-gradient(135deg,#eef4ff,#dceeff)}
@@ -54,7 +53,6 @@ section{max-width:900px;margin:0 auto;padding:0 5% 72px}
 .cp.tool{background:linear-gradient(135deg,#fff3ee,#ffddd0)}
 .cp.tax{background:linear-gradient(135deg,#f0eeff,#ddd6fe)}
 .cp.fin{background:linear-gradient(135deg,#fef9e7,#fde68a)}
-/* Multi-bar preview for merged dashboard */
 .cp.dash-multi{background:linear-gradient(135deg,#eef4ff,#dceeff);height:155px}
 .dash-multi-inner{display:flex;align-items:flex-end;gap:6px;padding:20px;height:100%;width:100%;justify-content:center}
 .bar{width:22px;border-radius:5px 5px 0 0;opacity:.85}
@@ -101,7 +99,6 @@ section{max-width:900px;margin:0 auto;padding:0 5% 72px}
 .cf{padding:12px 22px;border-top:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
 .cl{font-size:.82rem;font-weight:600;color:var(--accent);text-decoration:none}
 .cl:hover{text-decoration:underline}
-/* Multi-link row for merged card */
 .cf-links{display:flex;gap:16px;flex-wrap:wrap}
 .cs{font-size:.73rem;font-weight:600;display:flex;align-items:center;gap:5px}
 .csl{color:var(--a2)}
@@ -135,6 +132,17 @@ section{max-width:900px;margin:0 auto;padding:0 5% 72px}
 .div2{max-width:900px;margin:0 auto;padding:0 5%}
 .div2 hr{border:none;border-top:1px solid var(--bd);margin-bottom:64px}
 footer{text-align:center;padding:28px 5%;color:var(--ink-faint);font-size:.8rem;border-top:1px solid var(--bd)}
+
+/* ── VIDEO DEMO PLAYER ── */
+.video-demo{margin-top:18px;background:var(--bgc);border:1px solid var(--bd);border-radius:var(--r);overflow:hidden}
+.video-demo-header{display:flex;align-items:center;gap:10px;padding:14px 18px;border-bottom:1px solid var(--bd);background:#f4f8ff}
+.video-demo-dot{width:8px;height:8px;border-radius:50%;background:var(--a2)}
+.video-demo-label{font-size:.76rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--a2)}
+.video-demo-title{font-size:.82rem;color:var(--ink-light);margin-left:4px}
+.video-demo video{display:block;width:100%;max-height:480px;background:#0a1628}
+.video-demo-caption{padding:12px 18px;font-size:.78rem;color:var(--ink-faint);line-height:1.55;border-top:1px solid var(--bd)}
+.video-demo-caption strong{color:var(--ink-light)}
+
 @media(max-width:700px){.na{display:none}.hero{flex-direction:column;gap:24px;padding:52px 5% 36px}.hb{flex-direction:row;flex-wrap:wrap}.hbx{min-width:120px}.pg{grid-template-columns:1fr}.cbox{padding:28px 20px}.pc.full{grid-column:auto}}
 </style>
 </head>
@@ -153,7 +161,6 @@ footer{text-align:center;padding:28px 5%;color:var(--ink-faint);font-size:.8rem;
   <div class="ht">
     <div class="htag">&#128204; Open to Opportunities &mdash; Dubai, UAE</div>
     <h1>Finance, Analytics &amp;<br><em>Business Intelligence</em><br>Professional</h1>
-
     <div class="hcta">
       <a href="#projects" class="bp">View My Work</a>
       <a href="#contact" class="bo">Get in Touch</a>
@@ -189,16 +196,13 @@ footer{text-align:center;padding:28px 5%;color:var(--ink-faint);font-size:.8rem;
   <div class="sh2"><span class="stg">01</span><h2 class="sti">Dashboards &amp; Data Viz</h2></div>
   <div class="pg">
 
-    <!-- EXECUTIVE DASHBOARD TILE -->
     <div class="pc">
       <div class="cp dash">
         <svg viewBox="0 0 280 120" xmlns="http://www.w3.org/2000/svg" style="width:88%;height:88%;padding:10px">
-          <!-- grid lines -->
           <line x1="20" y1="20" x2="20" y2="100" stroke="#c8d9f8" stroke-width="1"/>
           <line x1="20" y1="100" x2="265" y2="100" stroke="#c8d9f8" stroke-width="1"/>
           <line x1="20" y1="70" x2="265" y2="70" stroke="#e2eaf8" stroke-width="1" stroke-dasharray="4,3"/>
           <line x1="20" y1="45" x2="265" y2="45" stroke="#e2eaf8" stroke-width="1" stroke-dasharray="4,3"/>
-          <!-- line 1 (blue) -->
           <polyline points="30,85 75,60 120,72 165,40 210,52 260,28" fill="none" stroke="#1a6cf6" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
           <circle cx="30" cy="85" r="3.5" fill="#1a6cf6"/>
           <circle cx="75" cy="60" r="3.5" fill="#1a6cf6"/>
@@ -206,9 +210,7 @@ footer{text-align:center;padding:28px 5%;color:var(--ink-faint);font-size:.8rem;
           <circle cx="165" cy="40" r="3.5" fill="#1a6cf6"/>
           <circle cx="210" cy="52" r="3.5" fill="#1a6cf6"/>
           <circle cx="260" cy="28" r="3.5" fill="#1a6cf6"/>
-          <!-- line 2 (light blue) -->
           <polyline points="30,92 75,78 120,82 165,65 210,72 260,58" fill="none" stroke="#93c5fd" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5,3"/>
-          <!-- area fill under line 1 -->
           <polyline points="30,85 75,60 120,72 165,40 210,52 260,28 260,100 30,100" fill="#1a6cf6" fill-opacity="0.07" stroke="none"/>
         </svg>
         <span class="ctb cbd">Dashboard</span>
@@ -268,8 +270,9 @@ footer{text-align:center;padding:28px 5%;color:var(--ink-faint);font-size:.8rem;
       <div class="cf"><a href="https://docs.google.com/spreadsheets/d/15_WPduQkSwqoTjTIWJ7-cWxlXVf8pmIi1MTOLjAGR0w/" target="_blank" class="cl">View Live Automation &#8599;</a><span class="cs csl">Running</span></div>
     </div>
 
-    <div class="pc">
-      <div class="cp auto" style="background:linear-gradient(135deg,#eef9ff,#c8e8ff)">
+    <!-- SMART ALERTS CARD — FULL WIDTH WITH VIDEO -->
+    <div class="pc full">
+      <div class="cp auto" style="background:linear-gradient(135deg,#eef9ff,#c8e8ff);height:155px">
         <div class="pfl">
           <div class="fn" style="background:#e0f2fe;border:2px solid #0ea5e9">&#128337;</div>
           <div class="fa">&#8594;</div>
@@ -286,6 +289,29 @@ footer{text-align:center;padding:28px 5%;color:var(--ink-faint);font-size:.8rem;
         <p class="cd">Zero-touch workflows that trigger email alerts on billing due dates, sheet edits, keyword mentions, and cell changes — plus auto-capture of invoices received in Gmail directly into Drive folders, fully hands-free.</p>
         <div class="ctags"><span class="tag">Google Apps Script</span><span class="tag">Gmail</span><span class="tag">Google Drive</span><span class="tag">Sheets Triggers</span><span class="tag">Google Workspace</span></div>
       </div>
+
+      <!-- VIDEO DEMO SECTION -->
+      <div class="video-demo">
+        <div class="video-demo-header">
+          <span class="video-demo-dot"></span>
+          <span class="video-demo-label">Live Demo</span>
+          <span class="video-demo-title">— Smart Alerts &amp; Invoice Auto-Save in action</span>
+        </div>
+        <video
+          controls
+          muted
+          playsinline
+          preload="metadata"
+          style="width:100%;display:block;background:#0a1628;max-height:480px"
+        >
+          <source src="Video_Project_3_labeled.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-demo-caption">
+          <strong>What you're seeing:</strong> A Google Apps Script automation that monitors Gmail for incoming invoices, extracts key data, and auto-saves attachments to organized Drive folders — while simultaneously triggering Sheets-based alerts for billing due dates and cell-level changes. Fully hands-free once deployed.
+        </div>
+      </div>
+
       <div class="cf"><a href="#contact" class="cl">Request Demo</a><span class="cs csl">Running</span></div>
     </div>
 
@@ -301,11 +327,8 @@ footer{text-align:center;padding:28px 5%;color:var(--ink-faint);font-size:.8rem;
     <div class="pc">
       <div class="cp tax">
         <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg" style="width:80%;height:80%">
-          <!-- shield -->
           <path d="M100,15 L155,38 L155,78 C155,105 100,120 100,120 C100,120 45,105 45,78 L45,38 Z" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
-          <!-- checkmark -->
           <polyline points="72,72 90,90 130,55" fill="none" stroke="#7c3aed" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-          <!-- UAE text inside -->
           <text x="100" y="108" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" font-weight="700" fill="#7c3aed" letter-spacing="2">FTA</text>
         </svg>
         <span class="ctb cbx">UAE VAT</span>
@@ -321,19 +344,14 @@ footer{text-align:center;padding:28px 5%;color:var(--ink-faint);font-size:.8rem;
     <div class="pc">
       <div class="cp tax" style="background:linear-gradient(135deg,#fdf2f8,#f5d0fe)">
         <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg" style="width:80%;height:80%">
-          <!-- book/ledger body -->
           <rect x="38" y="18" width="124" height="96" rx="6" fill="#f3e8ff" stroke="#9333ea" stroke-width="2.2"/>
-          <!-- spine -->
           <rect x="38" y="18" width="18" height="96" rx="4" fill="#e9d5ff" stroke="#9333ea" stroke-width="1.5"/>
-          <!-- ruled lines -->
           <line x1="68" y1="40" x2="148" y2="40" stroke="#c084fc" stroke-width="1.5"/>
           <line x1="68" y1="54" x2="148" y2="54" stroke="#c084fc" stroke-width="1.5"/>
           <line x1="68" y1="68" x2="148" y2="68" stroke="#c084fc" stroke-width="1.5"/>
           <line x1="68" y1="82" x2="148" y2="82" stroke="#c084fc" stroke-width="1.5"/>
           <line x1="68" y1="96" x2="130" y2="96" stroke="#c084fc" stroke-width="1.5"/>
-          <!-- column divider -->
           <line x1="118" y1="32" x2="118" y2="104" stroke="#d8b4fe" stroke-width="1" stroke-dasharray="3,2"/>
-          <!-- P&L label -->
           <text x="88" y="30" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" font-weight="700" fill="#7e22ce">P&L</text>
           <text x="133" y="30" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" font-weight="700" fill="#7e22ce">B/S</text>
         </svg>
